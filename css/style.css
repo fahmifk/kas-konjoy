@@ -1,3 +1,8 @@
+/* ======================================
+   KAS KONJOY
+   style.css v2
+====================================== */
+
 *{
     margin:0;
     padding:0;
@@ -6,195 +11,346 @@
 }
 
 body{
+
     min-height:100vh;
+
     display:flex;
+
     justify-content:center;
+
     align-items:center;
+
     overflow:hidden;
-    background:linear-gradient(135deg,#1d4ed8,#2563eb,#0ea5e9);
+
+    background:linear-gradient(
+        135deg,
+        #2563eb,
+        #4f46e5,
+        #0ea5e9
+    );
+
+    background-size:300% 300%;
+
+    animation:bgMove 12s ease infinite;
+
     position:relative;
+
 }
 
-/* Background Blur */
+/* ===========================
+   Background
+=========================== */
+
+@keyframes bgMove{
+
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+
+}
+
 .background{
-    position:absolute;
-    width:100%;
-    height:100%;
-    overflow:hidden;
+
+position:absolute;
+
+width:100%;
+height:100%;
+
+overflow:hidden;
+
 }
 
 .circle{
-    position:absolute;
-    border-radius:50%;
-    filter:blur(70px);
+
+position:absolute;
+
+border-radius:50%;
+
+filter:blur(70px);
+
+animation:float 8s ease-in-out infinite;
+
 }
 
 .circle1{
-    width:320px;
-    height:320px;
-    background:#ffffff55;
-    top:-100px;
-    right:-100px;
+
+width:340px;
+height:340px;
+
+background:rgba(255,255,255,.18);
+
+top:-120px;
+right:-100px;
+
 }
 
 .circle2{
-    width:280px;
-    height:280px;
-    background:#38bdf855;
-    bottom:-100px;
-    left:-100px;
-}
 
-/* Card */
-.card{
-    position:relative;
-    z-index:10;
+width:280px;
+height:280px;
 
-    width:480px;
-    max-width:90%;
+background:rgba(56,189,248,.35);
 
-    padding:45px 40px;
+bottom:-100px;
+left:-100px;
 
-    text-align:center;
-
-    border-radius:32px;
-
-    background:rgba(255,255,255,.15);
-    backdrop-filter:blur(20px);
-
-    box-shadow:
-        0 25px 60px rgba(0,0,0,.25);
-
-    color:white;
-
-    animation:fadeUp .8s ease;
-    transition:.35s;
-}
-
-.card:hover{
-
-    transform:translateY(-5px);
-
-    box-shadow:
-    0 35px 70px rgba(0,0,0,.30);
+animation-delay:2s;
 
 }
 
-/* Logo */
-
-.logo{
-    width:120px;
-    height:120px;
-
-    margin:0 auto 25px;
-
-    border-radius:30px;
-
-    background:rgba(255,255,255,.18);
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    font-size:64px;
-
-    box-shadow:
-        0 15px 35px rgba(0,0,0,.18);
-
-    animation:float 3s ease-in-out infinite;
-}
 @keyframes float{
 
 0%,100%{
+
 transform:translateY(0);
+
 }
 
 50%{
+
+transform:translateY(-20px);
+
+}
+
+}
+
+/* ===========================
+   Card
+=========================== */
+
+.card{
+
+position:relative;
+
+z-index:10;
+
+width:480px;
+
+max-width:92%;
+
+padding:50px 40px;
+
+text-align:center;
+
+border-radius:30px;
+
+background:rgba(255,255,255,.15);
+
+backdrop-filter:blur(18px);
+
+box-shadow:
+
+0 25px 60px rgba(0,0,0,.25);
+
+color:white;
+
+animation:fadeUp .8s ease;
+
+}
+
+/* ===========================
+   Logo
+=========================== */
+
+.logo{
+
+width:110px;
+
+height:110px;
+
+margin:auto;
+
+border-radius:24px;
+
+background:rgba(255,255,255,.18);
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:56px;
+
+box-shadow:
+
+0 10px 25px rgba(0,0,0,.18);
+
+animation:logoFloat 3s ease-in-out infinite;
+
+}
+
+@keyframes logoFloat{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
 transform:translateY(-10px);
-}
 
 }
 
-/* Judul */
+}
+
+/* ===========================
+   Text
+=========================== */
 
 h1{
 
-    margin-top:28px;
+margin-top:28px;
 
-    font-size:46px;
+font-size:42px;
 
-    font-weight:700;
+font-weight:700;
 
 }
-
-/* Deskripsi */
 
 p{
 
-    margin-top:15px;
+margin-top:16px;
 
-    font-size:18px;
+line-height:1.8;
 
-    line-height:1.8;
+font-size:17px;
 
-    opacity:.92;
+opacity:.92;
 
 }
 
-/* Loading */
+/* ===========================
+   Loader
+=========================== */
 
 .loader{
 
-    width:320px;
-    max-width:100%;
+width:100%;
 
-    height:12px;
+height:10px;
 
-    margin:40px auto 25px;
+margin:35px auto 18px;
 
-    background:rgba(255,255,255,.25);
+background:rgba(255,255,255,.25);
 
-    border-radius:100px;
+border-radius:50px;
 
-    overflow:hidden;
+overflow:hidden;
 
 }
 
 .progress{
 
-    width:0;
+width:0;
 
-    height:100%;
+height:100%;
 
-    border-radius:100px;
+background:white;
 
-    background:white;
-
-    animation:loading 3.2s linear forwards;
+animation:loading 3.2s linear forwards;
 
 }
 
 @keyframes loading{
 
 100%{
+
 width:100%;
-}
 
 }
 
-/* Status */
+}
 
 .small{
 
-    font-size:15px;
+font-size:15px;
 
-    opacity:.9;
+opacity:.9;
 
-    letter-spacing:.4px;
+min-height:20px;
 
 }
 
-/* Animasi */
+/* ===========================
+   Login Button
+=========================== */
+
+#login-area{
+
+display:none;
+
+margin-top:28px;
+
+animation:fadeUp .5s ease;
+
+}
+
+.login-btn{
+
+border:none;
+
+outline:none;
+
+cursor:pointer;
+
+padding:16px 34px;
+
+border-radius:14px;
+
+background:white;
+
+color:#2563eb;
+
+font-size:17px;
+
+font-weight:600;
+
+transition:.3s;
+
+box-shadow:
+
+0 12px 30px rgba(0,0,0,.18);
+
+}
+
+.login-btn:hover{
+
+transform:translateY(-4px);
+
+box-shadow:
+
+0 18px 40px rgba(0,0,0,.22);
+
+}
+
+.login-btn:disabled{
+
+opacity:.7;
+
+cursor:not-allowed;
+
+}
+
+/* ===========================
+   Version
+=========================== */
+
+.version{
+
+margin-top:35px;
+
+font-size:13px;
+
+opacity:.75;
+
+}
+
+/* ===========================
+   Animation
+=========================== */
 
 @keyframes fadeUp{
 
@@ -202,7 +358,7 @@ from{
 
 opacity:0;
 
-transform:translateY(25px);
+transform:translateY(20px);
 
 }
 
@@ -216,13 +372,15 @@ transform:translateY(0);
 
 }
 
-/* Mobile */
+/* ===========================
+   Mobile
+=========================== */
 
 @media(max-width:600px){
 
 .card{
 
-padding:35px 25px;
+padding:40px 25px;
 
 }
 
@@ -230,7 +388,8 @@ padding:35px 25px;
 
 width:90px;
 height:90px;
-font-size:50px;
+
+font-size:46px;
 
 }
 
@@ -242,62 +401,14 @@ font-size:34px;
 
 p{
 
-font-size:16px;
-
-}
-
-.loader{
-
-width:100%;
-
-}
-
-}
-
-/* LOGIN */
-
-#login-area{
-
-display:none;
-
-margin-top:30px;
-
-animation:fadeUp .6s ease;
+font-size:15px;
 
 }
 
 .login-btn{
 
-display:inline-block;
-
-padding:16px 35px;
-
-background:#ffffff;
-
-color:#2563eb;
-
-font-weight:600;
-
-font-size:18px;
-
-text-decoration:none;
-
-border-radius:14px;
-
-box-shadow:
-0 12px 30px rgba(0,0,0,.18);
-
-transition:.3s;
+width:100%;
 
 }
-
-.login-btn:hover{
-
-transform:translateY(-3px);
-
-background:#f8fafc;
-
-box-shadow:
-0 18px 40px rgba(0,0,0,.22);
 
 }
