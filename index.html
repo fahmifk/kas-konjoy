@@ -1,172 +1,56 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Kas Konjoy</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Sistem Pencatatan Kas Komunitas Konjoy">
+<title>Kas Konjoy</title>
 
-    <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
-
-    <!-- Favicon (nanti kita buat) -->
-    <link rel="icon" href="assets/favicon.ico">
+<meta name="theme-color" content="#2563eb">
 
 </head>
 
 <body>
 
-    <!-- Background -->
-    <div class="background">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
+<div class="background">
+
+    <div class="circle circle1"></div>
+    <div class="circle circle2"></div>
+
+</div>
+
+<div class="card">
+
+    <div class="logo">
+        💰
     </div>
 
-    <!-- Main -->
-    <main class="container">
+    <h1>Kas Konjoy</h1>
 
-        <!-- Hero -->
-        <section class="hero">
+    <p>
+        Sistem pencatatan kas komunitas.<br>
+        Aman, cepat, dan dapat diakses kapan saja.
+    </p>
 
-            <div class="logo">
-                <i class="fa-solid fa-wallet"></i>
-            </div>
-
-            <h1>Kas Konjoy</h1>
-
-            <p class="subtitle">
-                Sistem Pencatatan Kas Komunitas
-            </p>
-
-            <p class="description">
-                Kelola kas anggota dengan lebih mudah, aman,
-                transparan, dan berbasis Google Cloud.
-            </p>
-
-            <button id="btnMasuk">
-                <i class="fa-solid fa-right-to-bracket"></i>
-                Masuk ke Aplikasi
-            </button>
-
-        </section>
-
-        <!-- Feature -->
-        <section class="features">
-
-            <div class="card">
-                <i class="fa-solid fa-users"></i>
-                <h3>Anggota</h3>
-                <p>
-                    Kelola seluruh anggota komunitas dengan mudah.
-                </p>
-            </div>
-
-            <div class="card">
-                <i class="fa-solid fa-money-bill-transfer"></i>
-                <h3>Transaksi</h3>
-                <p>
-                    Catat pemasukan dan pengeluaran secara realtime.
-                </p>
-            </div>
-
-            <div class="card">
-                <i class="fa-solid fa-chart-column"></i>
-                <h3>Dashboard</h3>
-                <p>
-                    Pantau saldo kas dan aktivitas transaksi.
-                </p>
-            </div>
-
-            <div class="card">
-                <i class="fa-solid fa-cloud"></i>
-                <h3>Cloud</h3>
-                <p>
-                    Data tersimpan aman menggunakan Google Cloud.
-                </p>
-            </div>
-
-        </section>
-
-        <!-- Info -->
-        <section class="info">
-
-            <div class="info-item">
-                <i class="fa-solid fa-shield-halved"></i>
-                <span>Aman</span>
-            </div>
-
-            <div class="info-item">
-                <i class="fa-solid fa-bolt"></i>
-                <span>Cepat</span>
-            </div>
-
-            <div class="info-item">
-                <i class="fa-solid fa-lock"></i>
-                <span>HTTPS</span>
-            </div>
-
-        </section>
-
-    </main>
-
-    <!-- Loading Overlay -->
-    <div id="loadingScreen">
-
-        <div class="loader-box">
-
-            <div class="loader-logo">
-                <i class="fa-solid fa-wallet"></i>
-            </div>
-
-            <h2>Menghubungkan...</h2>
-
-            <div class="progress">
-                <div class="progress-bar"></div>
-            </div>
-
-            <p>Mohon tunggu sebentar</p>
-
-        </div>
-
+    <div class="loader">
+        <div class="progress"></div>
     </div>
 
-    <!-- Footer -->
+    <div class="small">
+        Sedang membuka aplikasi...
+    </div>
 
-    <footer>
+</div>
 
-        <p>Versi 1.0.0</p>
-
-        <p>
-            © 2026 Kas Konjoy
-        </p>
-
-    </footer>
-
-    <!-- Javascript -->
-    <script>
-
-        const APP_URL = "https://script.google.com/macros/s/AKfycbzbw0pMdeLaD4o1ZZrsHNrvT5c8AvIIMShkwJpiET3aXTQTqW05gz6sUnjAJo2sPqUmvw/exec";
-
-    </script>
-
-    <script src="js/app.js"></script>
+<script src="js/app.js"></script>
 
 </body>
-
 </html>
