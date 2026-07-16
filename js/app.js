@@ -3,8 +3,10 @@ const APP_URL = "https://script.google.com/macros/s/AKfycbzbw0pMdeLaD4o1ZZrsHNrv
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    const card = document.querySelector(".card");
-    const status = document.querySelector(".small");
+    const loader = document.getElementById("loader");
+    const status = document.getElementById("loadingText");
+    const loginArea = document.getElementById("login-area");
+    const loginBtn = document.getElementById("loginBtn");
 
     const messages = [
         "Menghubungkan ke server...",
@@ -16,24 +18,44 @@ document.addEventListener("DOMContentLoaded", () => {
     let i = 0;
 
     const interval = setInterval(() => {
-        if (i < messages.length) {
-            status.innerText = messages[i];
-            i++;
-        }
-    }, 700);
 
+        if (i < messages.length) {
+
+            status.innerText = messages[i];
+
+            i++;
+
+        }
+
+    },700);
+
+    // Setelah loading selesai
     setTimeout(() => {
 
         clearInterval(interval);
 
-        card.style.transition = "all .6s ease";
-        card.style.opacity = "0";
-        card.style.transform = "translateY(-25px) scale(.96)";
+        loader.style.display = "none";
+        status.style.display = "none";
 
-        setTimeout(() => {
-            window.location.href = APP_URL;
-        }, 600);
+        loginArea.style.display = "block";
 
-    }, 3200);
+    },3200);
+
+    // Saat tombol login diklik
+    loginBtn.addEventListener("click",(e)=>{
+
+        e.preventDefault();
+
+        loginBtn.innerHTML="⏳ Menghubungkan...";
+
+        loginBtn.style.pointerEvents="none";
+
+        setTimeout(()=>{
+
+            window.location.href=APP_URL;
+
+        },1000);
+
+    });
 
 });
