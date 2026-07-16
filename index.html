@@ -1,70 +1,89 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Kas Konjoy</title>
+    <title>Kas Konjoy</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta name="description" content="Sistem Pencatatan Kas Komunitas">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 
 <body>
 
-<div class="background">
+    <!-- Background -->
+    <div class="background">
 
-<div class="circle circle1"></div>
-<div class="circle circle2"></div>
+        <div class="circle circle1"></div>
 
-</div>
+        <div class="circle circle2"></div>
 
-<div class="card">
+    </div>
 
-<div class="logo">
-💰
-</div>
+    <!-- Card -->
+    <div class="card">
 
-<h1>Kas Konjoy</h1>
+        <!-- Logo -->
+        <div class="logo">
+            💰
+        </div>
 
-<p>
-Sistem pencatatan kas komunitas.<br>
-Aman, cepat, dan dapat diakses kapan saja.
-</p>
+        <!-- Title -->
+        <h1>Kas Konjoy</h1>
 
-<div class="loader" id="loader">
+        <!-- Description -->
+        <p>
+            Sistem pencatatan kas komunitas.<br>
+            Aman, transparan, dan dapat diakses kapan saja.
+        </p>
 
-<div class="progress"></div>
+        <!-- Loading -->
+        <div class="loader" id="loader">
 
-</div>
+            <div class="progress"></div>
 
-<div class="small" id="loadingText">
+        </div>
 
-Memuat data komunitas...
+        <!-- Loading Text -->
+        <div class="small" id="loadingText">
 
-</div>
+            Menghubungkan ke server...
 
-<div id="login-area">
+        </div>
 
-<a
-class="login-btn"
-href="https://script.google.com/macros/s/AKfycbzbw0pMdeLaD4o1ZZrsHNrvT5c8AvIIMShkwJpiET3aXTQTqW05gz6sUnjAJo2sPqUmvw/exec">
+        <!-- Login Area -->
+        <div id="login-area">
 
-🔐 Login dengan Google
+            <button id="loginBtn" class="login-btn">
 
-</a>
+                🔐 Login dengan Google
 
-</div>
+            </button>
 
-</div>
+        </div>
 
-<script src="js/app.js"></script>
+        <!-- Version -->
+        <div class="version">
+
+            Versi 1.0.0
+
+        </div>
+
+    </div>
+
+    <script src="js/app.js"></script>
 
 </body>
+
 </html>
